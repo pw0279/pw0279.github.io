@@ -1,0 +1,135 @@
+<html>
+
+	<head>
+        <title>Games Design Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="main.css" >
+	</head>
+
+	<body>
+        <div id="BackgroundTitle">
+            <div id="BackgroundText">
+                games
+                design
+            </div>
+        </div>
+        
+        <div id="Main">
+            <div id="Header">
+                <div id="StripD">
+                    <div id="StripM">
+                        <div id="StripL">
+                        </div>
+                    </div>
+                </div>
+                <div id="TitleBox">
+                    <div id="SubTitle">
+                        <div id="TitleSpacer">
+                        </div>
+                        <div id="Title">
+                            <div id="TitleText">
+                                |Gallery|
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="ContentBox">
+                <div id="SlideShowContainer">
+                    <div class="SlideShow">
+                        <img src="images/IMG_0126.PNG" class="ImageList"></img>
+                        <img src="images/IMG_0139.JPG" class="ImageList"></img>
+                        <img src="images/IMG_0142.PNG" class="ImageList"></img>
+                    </div>
+                </div>
+                <div id="SlideShowTextBox">
+                    <p>This is a collection of the pictures from the 'Pojects' and</p>
+                    <p>'About' sections, as well as some from the design process</p>
+                    <p>of making this site.</p>
+                </div>
+                <div id="ButtonContainer">
+                    <img src="images/prevarrow.png" id="PrevButton" class="ImageButton"></img>
+                    <img src="images/nextarrow.png" id="NextButton" class="ImageButton"></img>
+                </div>
+            </div>
+            
+            <div id="Footer">
+                <div id="QuickNav">
+                    <div id="NavBar">
+                        <a class="Links"; href="index.html">Home</a> | <a class="Links"; href="projects.html">Projects</a> | <a class="Links"; href="about.html">About</a> | <a class="Links"; href="gallery.html">Gallery</a>
+                    </div>
+                </div>
+                <div id="BottomBorder">
+                </div>
+                <div id="FooterSpacer">
+                    <div id="SpacerM">
+                        <div id="SpacerL">
+                        </div>
+                    </div>
+                </div>
+                <div id="FooterD">
+                    <div id="FooterM">
+                        <div id="FooterL">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <script>
+            const slide_show = document.querySelector(".SlideShow");
+            const slide_images = document.querySelectorAll(".SlideShow img");
+            const prev_btn = document.querySelector("#PrevButton");
+            const next_btn = document.querySelector("#NextButton");
+            
+            let counter = 0;
+            var size = window.innerWidth * (0.75 * 0.7);
+            
+            prev_btn.style.display = "none";
+            
+            next_btn.addEventListener("click", function()
+            {
+                counter++;
+                slide_show.style.transform = "translateX(" + (-size * counter) + "px)";
+                
+                if (counter >= slide_images.length - 1)
+                {
+                    next_btn.style.display = "none";
+                    prev_btn.style.display = "block";
+                }
+                else
+                {
+                    next_btn.style.display = "block";
+                    prev_btn.style.display = "block";
+                }
+            });
+            
+            prev_btn.addEventListener("click", function()
+            {
+                counter--;
+                slide_show.style.transform = "translateX(" + (-size * counter) + "px)";
+                if (counter <= 0)
+                {
+                    prev_btn.style.display = "none";
+                    next_btn.style.display = "block";
+                }
+                else
+                {
+                    prev_btn.style.display = "block";
+                    next_btn.style.display = "block";
+                }
+            });
+        
+            function change_size()
+            {
+                size = window.innerWidth * (0.75 * 0.7);
+            }
+        
+            window.onresize = change_size;
+        </script>
+   
+	</body>
+    
+<html>
+
