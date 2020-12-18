@@ -3,9 +3,6 @@
 	<head>
         <title>Games Design Portfolio</title>
         <link rel="stylesheet" type="text/css" href="main.css" >
-        <script>
-            
-        </script>
 	</head>
 
 	<body id="Body">
@@ -36,6 +33,11 @@
                     </div>
                 </div>
             </div>
+            
+            <div id="ContentBox">
+                <canvas id="HomeCanvas"></canvas>
+            </div>
+            
             <div id="Footer">
                 <div id="QuickNav">
                     <div id="NavBar">
@@ -58,6 +60,73 @@
                 </div>
             </div>
         </div>
+        
+        <script>
+            // v Not working yet v
+            /*var frameNumber = 0;
+            
+            function load_images()
+            {
+                var RobotImage = document.createElement("img");
+                RobotImage.src = "images/sheetstart.png";
+            }
+        
+            function main()
+            {
+                var canvas = document.getElementById("HomeCanvas");
+                window.addEventListener("resize", resize_canvas);
+                
+                function resize_canvas()
+                {
+                    if (window.innerWidth < 765)
+                    {
+                        canvas.width = 765 * 0.74;
+                    }
+                    else
+                    {
+                        canvas.width = window.innerWidth * 0.74;
+                    }
+                    if (window.innerHeight < 555)
+                    {
+                        canvas.height = 555 * 0.85;
+                    }
+                    else
+                    {
+                        canvas.height = window.innerHeight * 0.85;
+                    }
+                }
+                
+                var ctx = canvas.getContext("2d");
+                resize_canvas();
+                load_images();
+                setTimeout(function()
+                {
+                    draw(ctx);
+                }, 3000);
+            }
+        
+            function draw(ctx)
+            {
+                ctx.drawImage(RobotImage2, 0, 0, 512, 512, 0, 0, 128, 128);
+                
+                if (frameNumber > 15)
+                {
+                    frameNumber = 0;
+                }
+                else
+                {
+                    frameNumber++;
+                }
+                
+                window.requestAnimationFrame(function()
+                {
+                    draw(ctx);
+                })
+            }
+        
+            window.onload = main();*/
+        </script>
+        
 	</body>
 
 <html>
